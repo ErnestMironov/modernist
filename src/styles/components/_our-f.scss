@@ -1,0 +1,56 @@
+.our-f {
+  background-color: #f5fbfd;
+  margin-top: 70px;
+  padding-top: 65px;
+  padding-bottom: 100px;
+  &__info {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #8ca0a6;
+    margin-top: 25px;
+  }
+
+  &__accordion {
+    margin-top: 68px;
+    .card {
+      background: transparent;
+      border: 0;
+      &-header {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        border-top: 1px solid #8b9fa652;
+        padding: 30px 27px;
+      }
+      &-body {
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.03em;
+        color: #8ca0a6;
+      }
+    }
+    .btn {
+      padding: 0;
+      color: $txt-color;
+
+      &:hover,
+      &:not(.collapsed) {
+        color: $txt-color_light;
+        text-decoration: none;
+      }
+      &:focus {
+        box-shadow: none;
+        text-decoration: none;
+      }
+
+      img {
+        transition: all ease 0.2s;
+      }
+      &:not(.collapsed) img {
+        transform: scale(-1);
+      }
+    }
+  }
+}

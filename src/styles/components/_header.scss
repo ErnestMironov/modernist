@@ -1,0 +1,49 @@
+.header {
+  padding-top: 45px;
+
+  .container {
+    max-width: 1304px;
+  }
+  .nav {
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+      transition: all ease 0.2s;
+      transform-origin: top;
+      transform: translateX(-100%);
+      opacity: 0;
+      height: 0;
+      position: relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+    &.show {
+      opacity: 1;
+      transform: translateX(0);
+      height: auto;
+      z-index: 1;
+    }
+  }
+  .nav-item:last-child {
+    .nav-link {
+      padding-right: 0;
+    }
+  }
+  .nav-link {
+    color: $txt-color;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 35px;
+    font-family: $sunFlower;
+    transition: all ease 0.15s;
+
+    &:hover {
+      color: $txt-color_light;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+      padding: 15px 10px;
+    }
+  }
+}

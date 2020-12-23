@@ -1,0 +1,20 @@
+.footer {
+  background: #485053;
+  padding: 40px 0;
+
+  &__soc-item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+    img {
+      opacity: 0.4;
+      transition: ease 0.15s;
+      max-height: 23px;
+    }
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}

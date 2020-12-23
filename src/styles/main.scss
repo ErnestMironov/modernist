@@ -1,0 +1,31 @@
+@import "./node_modules/bootstrap/scss/_functions";
+@import "./node_modules/bootstrap/scss/_variables";
+@import "common/_variables.scss";
+@import "./node_modules/bootstrap/scss/_mixins";
+@import "./node_modules/bootstrap/scss/_root";
+@import "./node_modules/bootstrap/scss/_reboot";
+@import "./node_modules/bootstrap/scss/_type";
+@import "./node_modules/bootstrap/scss/_images";
+@import "./node_modules/bootstrap/scss/_grid";
+@import "./node_modules/bootstrap/scss/_buttons";
+@import "./node_modules/bootstrap/scss/_transitions";
+@import "./node_modules/bootstrap/scss/_nav";
+@import "./node_modules/bootstrap/scss/_card";
+@import "./node_modules/bootstrap/scss/_carousel";
+@import "./node_modules/bootstrap/scss/_utilities";
+
+@import "./node_modules/animate.css/source/_vars";
+@import "./node_modules/animate.css/source/_base";
+@import "./node_modules/animate.css/source/fading_entrances/fadeInLeft";
+@import "./node_modules/animate.css/source/back_entrances/backInUp";
+// @import "./node_modules/animate.css/animate";
+
+@import "common/_base.scss";
+
+@import "components/header";
+@import "components/main-banner";
+@import "components/faf";
+@import "components/quiz";
+@import "components/partners";
+@import "components/our-f";
+@import "components/footer";

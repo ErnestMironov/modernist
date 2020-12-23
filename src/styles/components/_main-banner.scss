@@ -1,0 +1,37 @@
+.main-banner {
+  margin-top: 30px;
+  margin-bottom: 76px;
+  &__bg {
+    top: 0;
+  }
+  &__txt {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+  }
+
+  &__desc {
+    margin-top: 15px;
+    color: $grey;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $txt-color_light;
+    margin-top: 18px;
+    transition: all ease 0.15s;
+    &:hover {
+      text-decoration: none;
+      color: $txt-color;
+    }
+  }
+
+  &__img {
+    margin-top: 50px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.faf {
+  padding-top: 60px;
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__list-item {
+    margin-bottom: 40px;
+    visibility: hidden;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icons {
+    height: 160px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__list-txt {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: $sunFlower;
+    color: $txt-color;
+    margin-top: 26px;
+  }
+}
