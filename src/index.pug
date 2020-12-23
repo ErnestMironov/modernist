@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 html(lang="en")
     include pug/blocks/head.pug
-    body
-        include pug/blocks/header.pug 
-       
+    body(style="background-image: url(images/bg.jpg); background-image: url(images/bg.webp)")
+        .loader
+        .welcome
+            include pug/blocks/header.pug 
+            .container
+                .welcome__slider
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                .welcome__txt-wrap
+                                    h3.welcome__title Cursus penati saccum nulla.
+                                    p.welcome__desc Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. 
+                                        |Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.
+                                    a.btn.welcome__more(href="javascript:;") Read More Here »
+                                .welcome__img
+                                    img(src="images/moose.jpg", alt="moose")
+                            .swiper-slide
+                                .welcome__txt-wrap
+                                    h3.welcome__title Lorem ipsum dolor sit amet.
+                                    p.welcome__desc Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. 
+                                        |Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.
+                                    a.btn.welcome__more(href="javascript:;") Read More Here »
+                                .welcome__img
+                                    img(src="images/man.jpg", alt="man")
+                    .welcome__nav
+                        .welcome__nav-item.welcome__nav-item_prev
+                            img(src="images/icons/angle_prev.png", alt="prev")
+                        .welcome__nav-item.welcome__nav-item_next
+                            img(src="images/icons/angle_next.png", alt="next")
+        include pug/blocks/service
+        script(src="scripts/main.js")
+
+

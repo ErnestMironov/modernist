@@ -1,0 +1,8 @@
+.service.container 
+    ul.service__list
+        each val in [1, 2, 3, 4]
+            li.service__card.wow.animate__animated.backInLeft(data-wow-duration=".3s" data-wow-delay=`${val / 4}s`)
+                .service__img
+                    img.service__icon.svg(src=`images/services/${val}.svg`, alt="")
+                h3.service__caption SERVICE TITLE
+                p.service__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, cum.

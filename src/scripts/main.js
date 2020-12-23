@@ -1,57 +1,42 @@
 /**
  * An example ES6 module:
  */
-import $ from 'jquery';
+import $ from 'jquery'
 import WOW from 'wow.js'
-import 'bootstrap/js/dist/collapse';
-import 'vanilla-hamburger/tilt-burger.js';
-import Swiper, { Autoplay } from 'swiper';
-Swiper.use([Autoplay]);
+import Swiper, { Autoplay, Navigation, EffectFade } from 'swiper';
+Swiper.use([Autoplay, Navigation, EffectFade]);
+import pasteSVG from './utils/pasteSvg'
+
 
 import 'swiper/swiper-bundle.css';
 
 
+$(document).ready(function () {
+    pasteSVG()
+    const swiper = new Swiper(`.welcome__slider .swiper-container`, {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            nextEl: '.welcome__nav-item_next',
+            prevEl: '.welcome__nav-item_prev',
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        autoplay: {
+            delay: 2000
+        },
+    });
 
-const swiper = new Swiper(`.partners__slider`, {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-        delay: 2000
-    },
-    // Responsive breakpoints
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 4,
-            spaceBetween: 40
-        }
+    window.onscroll = () => { scrollProgress() };
+
+    function scrollProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.querySelector(".loader").style.width = scrolled + "%";
     }
-});
 
-const burger = document.querySelector('tilt-burger');
-const menu = document.querySelector(`.header .nav`)
-
-burger.addEventListener('pressed-changed', (event) => {
-    menu.classList.contains('show') ? menu.classList.remove('show') : menu.classList.add(`show`);
-});
-
-$('.header .nav').on('click', '.nav-link', function (e) {
-    e.preventDefault();
-    const link = $(this).attr(`href`);
-    const aTag = $(link)
-    $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
+    new WOW().init();
 })
-
-
-new WOW().init();

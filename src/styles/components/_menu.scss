@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+
+  &__item {
+    font-size: 13px;
+    &:last-of-type {
+      margin-right: -18px;
+    }
+    a {
+      text-transform: uppercase;
+      background-color: transparent;
+      transition: all ease 0.18s;
+    }
+    &:hover,
+    &.active {
+      a {
+        background-color: $green;
+      }
+    }
+  }
+}

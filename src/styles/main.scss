@@ -2,12 +2,16 @@
 @import "common/_variables.scss";
 @import "../fonts/Georgia/stylesheet.css";
 
-// @import "./node_modules/animate.css/source/_vars";
-// @import "./node_modules/animate.css/source/_base";
-// @import "./node_modules/animate.css/source/fading_entrances/fadeInLeft";
-// @import "./node_modules/animate.css/source/back_entrances/backInUp";
-// @import "./node_modules/animate.css/animate";
+@import "./node_modules/animate.css/source/_vars";
+@import "./node_modules/animate.css/source/_base";
+@import "./node_modules/animate.css/source/back_entrances/backInLeft";
+@import "./node_modules/animate.css/animate";
 
 @import "common/_base.scss";
 
+@import "components/btn";
+@import "components/menu";
+
 @import "components/header";
+@import "components/welcome";
+@import "components/service";
